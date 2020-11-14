@@ -39,6 +39,98 @@
         
     </nav>
 
+    <div id="formModal" class="modal fade" role="dialog">
+        <div class="modal-dialog modal-lg" role="form">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Reserve a Table </h4>
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="numofguests" class="col-form-label">
+                                    <strong>Number of Guests</strong>
+                                </label>
+                            </div>
+                            <div class="form-group col-sm-10">
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline1" name="numofguests" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline1">1</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline2" name="numofguests" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline2">2</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline3" name="numofguests" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline3">3</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline4" name="numofguests" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline4">4</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline5" name="numofguests" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline5">5</label>
+                                </div>
+                                <div class="custom-control custom-radio custom-control-inline">
+                                    <input type="radio" id="customRadioInline6" name="numofguests" class="custom-control-input">
+                                    <label class="custom-control-label" for="customRadioInline6">6</label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="section" class="col-form-label">
+                                    <strong>Section</strong>
+                                </label>
+                            </div>
+                            <div class="form-group col-sm-10">
+                                <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                    <label class="btn btn-success active">
+                                        <input type="radio" name="options" id="option1" autocomplete="off" checked> Non-Smoking
+                                    </label>
+                                    <label class="btn btn-danger">
+                                        <input type="radio" name="options" id="option2" autocomplete="off"> Smoking
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group col-sm-2">
+                                <label for="time" class="col-form-label">
+                                    <strong>Date and Time</strong>
+                                </label>
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control" id="date" name="date" placeholder="Date">
+                            </div>
+                            <div class="form-group col-sm-4">
+                                <input type="text" class="form-control" id="time" name="time" placeholder="Time">
+                            </div>
+                        </div>
+
+                        <div class="form-row"> 
+                            <div class="form-group col-sm-2">
+                                
+                            </div>
+
+                            <div class="form-group col-sm-10">
+                                <button type="button" class="btn btn-secondary btn-sm" data-dismiss="modal">Cancel</button>
+                                <button type="submit" class="btn btn-primary btn-sm">Reserve</button>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <div id="loginModal" class="modal fade" role="dialog">
         <div class="modal-dialog modal-lg" role="content">
             <!-- Modal content-->
@@ -87,7 +179,7 @@
                     <img src="img/logo.png" alt="logo">
                 </div>
                 <div class="col-12 col-sm-3 align-self-center">
-                    <a href="#reservetable" class="btn btn-sm btn-block btn-warning" data-toggle="tooltip" data-html="true" title="Or Call us at <br><strong>+852 12345678</strong>" data-placement="bottom" role="button">
+                    <a class="btn btn-sm btn-block btn-warning" data-toggle="modal" data-target="#formModal" data-placement="bottom" role="button">
                         <strong>Reserve Table</strong>
                     </a>
                 </div>
@@ -140,7 +232,7 @@
                         </ol>
 
                     </div>
-                    
+
                     <a class="carousel-control-prev" href="#mycarousel" role="button" data-slide="prev">
                         <span class="carousel-control-prev-icon"></span>
                     </a>
@@ -208,64 +300,7 @@
             </div>
         </div>
 
-        <!--Form section for table reservation-->
-        <div class="row row-content d-flex justify-content-center">
-            <div class="col-xl-8 col-sm">
-                <div class="card">
-                    <h3 class="card-header bg-warning">Reserve a Table</h3>
-                    <div class="card-body">
-                        <form id="reservetable">
-                            <div class="form-group row">
-                                <label for="numofguests" class="col-md-2 col-form-label">
-                                    <strong>Number of Guests</strong>
-                                </label>
-                                <div class="col-md-10">
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline1" name="numofguests" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline1">1</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline2" name="numofguests" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline2">2</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline3" name="numofguests" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline3">3</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline4" name="numofguests" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline4">4</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline5" name="numofguests" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline5">5</label>
-                                    </div>
-                                    <div class="custom-control custom-radio custom-control-inline">
-                                        <input type="radio" id="customRadioInline6" name="numofguests" class="custom-control-input">
-                                        <label class="custom-control-label" for="customRadioInline6">6</label>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <label for="time" class="col-12 col-md-2 col-form-label">
-                                    <strong>Datetime and Time</strong>
-                                </label>
-                                <div class="col-7 col-md-4">
-                                    <input type="text" class="form-control" id="date" name="date" placeholder="Date">
-                                </div>
-                                <div class="col-5 col-md-4">
-                                    <input type="text" class="form-control" id="time" name="time" placeholder="Time">
-                                </div>
-                            </div>
-
-                            <div class="form-group row">
-                                <div class="offset-md-2 col-md-10">
-                                    <button type="submit" class="btn btn-primary">Reserve</button>
-                                </div>
-                            </div>
-
-                        </form>
+        
                     </div>
                 </div>
             </div>
@@ -318,11 +353,7 @@
 <script src="node_modules/jquery/dist/jquery.slim.min.js"></script>
 <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
 <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-<script>
-    $(document).ready(function(){
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
+
 </body>
 
 </html>
